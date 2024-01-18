@@ -6,9 +6,10 @@
 
 // ignore_for_file: public_member_api_docs, implementation_imports, depend_on_referenced_packages
 
-import 'package:flutter_stacked_implementation/services/remote/api_service.dart';
 import 'package:stacked_services/src/navigation/navigation_service.dart';
 import 'package:stacked_shared/stacked_shared.dart';
+
+import '../services/local/media_service.dart';
 
 final locator = StackedLocator.instance;
 
@@ -22,5 +23,5 @@ Future<void> setupLocator({
 
 // Register dependencies
   locator.registerLazySingleton(() => NavigationService());
-  locator.registerLazySingleton(() => ApiService());
+  locator.registerLazySingleton(() => MediaService());
 }
