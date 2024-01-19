@@ -48,9 +48,11 @@ dependencies:
   # http client
   dio:
   # svg
-  flutter_svg: ^2.0.9
-  google_fonts: ^6.1.0
-  flutter_screenutil: ^5.9.0
+  flutter_svg:
+  # otp pinput
+  pinput:
+  google_fonts:
+  flutter_screenutil:
 
 dev_dependencies:
   flutter_test:
