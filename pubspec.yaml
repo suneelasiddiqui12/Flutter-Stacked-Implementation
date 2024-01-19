@@ -49,6 +49,8 @@ dependencies:
   dio:
   # svg
   flutter_svg: ^2.0.9
+  # otp pinput
+  pinput:
 
 dev_dependencies:
   flutter_test:
