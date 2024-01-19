@@ -7,7 +7,7 @@ class SplashViewModel extends BaseViewModel {
 
   Future<void> onInit() async {
     await Future.delayed(const Duration(milliseconds: 2000));
-    NavService.navigateTo(Routes.imagePickerView);
+    NavService.navigateTo(Routes.onBoardingScreen);
     //onUserAuth();
   }
 
