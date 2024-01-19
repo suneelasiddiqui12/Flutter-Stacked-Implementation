@@ -7,6 +7,7 @@ import 'package:flutter_stacked_implementation/widgets/svg_icon_component.dart';
 import 'package:flutter_stacked_implementation/widgets/text_component.dart';
 
 class ButtonComponent extends StatelessWidget {
+
   final String btnText;
   final VoidCallback? onBtnPressed;
   final Color btnColor;
@@ -40,6 +41,7 @@ class ButtonComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     final _borderRadius = BorderRadius.circular(borderRadius);
     final btnColor = onBtnPressed == null
         ? AppColors.disable

@@ -13,6 +13,8 @@ class AppBarComponent extends StatelessWidget {
   final bool withBackgroundColor;
   final String? title;
   final TextStyle? titleStyle;
+
+
   const AppBarComponent({
     Key? key,
     this.onLeadingPressed,
