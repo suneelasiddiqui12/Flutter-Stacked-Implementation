@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stacked_implementation/app/app.router.dart';
+import 'package:flutter_stacked_implementation/constant/app_colors.dart';
 import 'package:flutter_stacked_implementation/constant/app_strings.dart';
+import 'package:flutter_stacked_implementation/services/local/navigation_services.dart';
 import 'package:flutter_stacked_implementation/widgets/button_component.dart';
 
-class OnBoardingScreen extends StatelessWidget {
-  const OnBoardingScreen({super.key});
+class OnBoardingView extends StatefulWidget {
+  const OnBoardingView({super.key});
 
+  @override
+  State<OnBoardingView> createState() => _OnBoardingViewState();
+}
+
+class _OnBoardingViewState extends State<OnBoardingView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,6 +20,7 @@ class OnBoardingScreen extends StatelessWidget {
         title: const Text(AppStrings.worldOf),
         centerTitle: true,
       ),
+      backgroundColor: AppColors.brightGray,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -20,7 +29,9 @@ class OnBoardingScreen extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: ButtonComponent(
               buttonText: AppStrings.login,
-              onPressed: () {},
+              onPressed: () {
+                NavService.navigateTo(Routes.formBasicView);
+              },
             ),
           ),
           Container(
@@ -39,3 +50,5 @@ class OnBoardingScreen extends StatelessWidget {
     );
   }
 }
+
+

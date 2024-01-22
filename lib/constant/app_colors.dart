@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-
+  static const frenchSkyBlue = Color(0xff73A2FF);
+  static const brightGray = Color(0xffEFEFEF);
+  static const quickGray = Color(0xffA6A6A6);
   static const charcoalGrey = Color(0xff414254);
   static const charcoalGreyLight = Color(0xff656d78);
   static const freshGreen = Color(0xff84d95b);
