@@ -3,6 +3,7 @@ import 'package:flutter_stacked_implementation/app/app.router.dart';
 import 'package:flutter_stacked_implementation/constant/app_colors.dart';
 import 'package:flutter_stacked_implementation/constant/font_styles_constant.dart';
 import 'package:flutter_stacked_implementation/services/local/navigation_services.dart';
+import 'package:flutter_stacked_implementation/utils/size_util.dart';
 import 'package:flutter_stacked_implementation/widgets/button_component.dart';
 import 'package:flutter_stacked_implementation/widgets/text_component.dart';
 import 'package:pinput/pinput.dart';
