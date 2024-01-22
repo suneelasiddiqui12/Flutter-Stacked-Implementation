@@ -33,12 +33,12 @@ class AppBarComponent extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
         backgroundColor: withBackgroundColor
-            ? AppColors.aliceBlue
+            ? AppColors.antiFlashWhite
             : AppColors.transparent,
         title: TextComponent(title ?? ""),
         titleTextStyle: titleStyle ??
             FontStylesConstant.font16(
-              color: AppColors.usafaBlue,
+              color: AppColors.antiFlashWhite,
               fontWeight: FontWeight.w700,
             ),
         leading: IconButton(

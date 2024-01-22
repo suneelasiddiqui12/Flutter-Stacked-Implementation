@@ -57,9 +57,9 @@ class TextFieldComponent extends StatefulWidget {
     this.onSuffixPressed,
     this.prefixWidget,
     this.onTap,
-    this.fillColor = AppColors.white,
+    this.fillColor = AppColors.black,
     this.enlargePrfixWidget = true,
-    this.labelColor = AppColors.charcoalGrey,
+    this.labelColor = AppColors.black,
     this.readOnly = false,
     this.enabled = true,
     this.maxLines,
@@ -106,7 +106,7 @@ class _TextFieldComponentState extends State<TextFieldComponent> {
         boxShadow: widget.isShadow
             ? [
                 const BoxShadow(
-                  color: AppColors.lightGrey,
+                  color: AppColors.black,
                   offset: Offset(0, 0),
                   blurRadius: 20,
                   spreadRadius: 0,
@@ -119,7 +119,7 @@ class _TextFieldComponentState extends State<TextFieldComponent> {
         controller: widget.controller,
         readOnly: widget.readOnly,
         focusNode: widget.currentFocus,
-        cursorColor: AppColors.sonicSilver,
+        cursorColor: AppColors.black,
         autovalidateMode: AutovalidateMode.onUserInteraction,
         enabled: widget.enabled,
         obscureText: widget.isPassword ? hidePassword : !hidePassword,
@@ -142,7 +142,7 @@ class _TextFieldComponentState extends State<TextFieldComponent> {
           }
         },
         style: widget.textStyle ??
-            FontStylesConstant.font12(color: AppColors.sonicSilver),
+            FontStylesConstant.font12(color: AppColors.black),
         validator: widget.validator,
         keyboardType: widget.keyboardType,
         inputFormatters: widget.formatter,
@@ -150,7 +150,7 @@ class _TextFieldComponentState extends State<TextFieldComponent> {
         decoration: InputDecoration(
           errorText: widget.errorText,
           errorStyle: FontStylesConstant.font12(
-            color: AppColors.bostonUniversityRed,
+            color: AppColors.black,
           ),
           counterText: '',
           filled: true,
@@ -188,13 +188,13 @@ class _TextFieldComponentState extends State<TextFieldComponent> {
           ),
           errorBorder: OutlineInputBorder(
             borderSide:
-                const BorderSide(color: AppColors.bostonUniversityRed),
+                const BorderSide(color: AppColors.black),
             borderRadius: BorderRadius.circular(
                 PresentationConstant.textFieldBorderRadius),
           ),
           focusedErrorBorder: OutlineInputBorder(
             borderSide:
-                const BorderSide(color: AppColors.bostonUniversityRed),
+                const BorderSide(color: AppColors.black),
             borderRadius: BorderRadius.circular(
                 PresentationConstant.textFieldBorderRadius),
           ),
@@ -207,7 +207,7 @@ class _TextFieldComponentState extends State<TextFieldComponent> {
           border: InputBorder.none,
           hintText: widget.hintText ?? '',
           hintStyle: widget.hintTextStyle ??
-              FontStylesConstant.font12(color: AppColors.sonicSilver),
+              FontStylesConstant.font12(color: AppColors.black),
           prefixIcon: widget.prefixWidget != null
               ? SizedBox(
                   width: widget.enlargePrfixWidget ? 102 : null,
@@ -244,7 +244,7 @@ class _TextFieldComponentState extends State<TextFieldComponent> {
                       child: widget.suffixIcon.runtimeType == IconData
                           ? Icon(
                               widget.suffixIcon,
-                              color: AppColors.greyishThree,
+                              color: AppColors.black,
                             )
                           : widget.suffixIcon,
                     )

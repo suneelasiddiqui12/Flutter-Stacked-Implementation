@@ -10,7 +10,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -24,7 +24,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -67,7 +67,7 @@ class FontStylesConstant {
     double height = 1.2,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -82,7 +82,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -96,7 +96,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -110,7 +110,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -124,7 +124,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -132,17 +132,18 @@ class FontStylesConstant {
         decoration: decoration,
       );
 
+
   static TextStyle font20({
     Color color = AppColors.black,
     FontWeight fontWeight = FontWeight.normal,
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
-        fontSize: 20.fontSize,
+        fontSize: 20.0,
         decoration: decoration,
       );
 
@@ -152,7 +153,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -166,7 +167,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -180,7 +181,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -194,7 +195,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -208,7 +209,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -222,7 +223,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -236,7 +237,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
