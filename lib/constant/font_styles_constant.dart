@@ -10,7 +10,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -24,7 +24,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -67,7 +67,7 @@ class FontStylesConstant {
     double height = 1.2,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -82,7 +82,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -96,7 +96,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -110,7 +110,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -124,7 +124,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -152,7 +152,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -166,7 +166,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -180,7 +180,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -194,7 +194,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -208,7 +208,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -222,7 +222,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
@@ -236,7 +236,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
