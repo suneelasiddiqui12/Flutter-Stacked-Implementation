@@ -8,5 +8,5 @@ class AppColors {
   static const frenchSkyBlue = Color(0xff73A2FF);
   static const brightGray = Color(0xffEFEFEF);
   static const quickGray = Color(0xffA6A6A6);
-  static const white = Color(0xffFFFFFF);
+  static const white = Color(0xffEFEFEF);
 }

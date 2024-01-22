@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stacked_implementation/app/app.router.dart';
 import 'package:flutter_stacked_implementation/constant/app_colors.dart';
 import 'package:flutter_stacked_implementation/constant/font_styles_constant.dart';
+import 'package:flutter_stacked_implementation/services/local/navigation_services.dart';
 import 'package:flutter_stacked_implementation/widgets/button_component.dart';
 import 'package:pinput/pinput.dart';
 import 'package:flutter_stacked_implementation/constant/app_strings.dart';
@@ -75,7 +77,9 @@ class OtpView extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 26.0),
                   child: ButtonComponent(
                     buttonText: AppStrings.next,
-                    onPressed: () {},
+                    onPressed: () {
+                      NavService.navigateTo(Routes.formBasicView);
+                    },
                   ),
                 ),
               ),
