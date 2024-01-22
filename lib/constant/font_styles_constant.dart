@@ -128,7 +128,7 @@ class FontStylesConstant {
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
-        fontSize: 18.fontSize,
+        fontSize: 18.0,
         decoration: decoration,
       );
 
@@ -138,7 +138,7 @@ class FontStylesConstant {
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
   }) =>
-      GoogleFonts.inter(
+      GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,

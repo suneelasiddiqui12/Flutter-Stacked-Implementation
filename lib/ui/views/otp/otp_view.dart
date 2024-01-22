@@ -4,6 +4,7 @@ import 'package:flutter_stacked_implementation/constant/app_colors.dart';
 import 'package:flutter_stacked_implementation/constant/font_styles_constant.dart';
 import 'package:flutter_stacked_implementation/services/local/navigation_services.dart';
 import 'package:flutter_stacked_implementation/widgets/button_component.dart';
+import 'package:flutter_stacked_implementation/widgets/text_component.dart';
 import 'package:pinput/pinput.dart';
 import 'package:flutter_stacked_implementation/constant/app_strings.dart';
 
@@ -40,9 +41,9 @@ class OtpView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Spacer(flex: 10),
-            const Text(
+            TextComponent(
               AppStrings.entrOtp,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+              style: FontStylesConstant.font18(fontWeight: FontWeight.w900),
             ),
             const Spacer(flex: 1),
             Pinput(
@@ -54,21 +55,16 @@ class OtpView extends StatelessWidget {
               },
               pinputAutovalidateMode: PinputAutovalidateMode.disabled,
               showCursor: true,
-              onCompleted: (pin) => print(pin),
+              onCompleted: (pin) => {print(pin)},
             ),
             const Spacer(),
-            const Text(
-              AppStrings.resendOtp,
-              style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.normal,
-                  color: AppColors.royalBlue),
-            ),
+            TextComponent(AppStrings.resendOtp,
+                style: FontStylesConstant.font18(color: AppColors.royalBlue)),
             const Spacer(),
-            const Text(
+            TextComponent(
               AppStrings.otpInstruction,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              style: FontStylesConstant.font18(fontWeight: FontWeight.w500),
             ),
             const Spacer(flex: 7),
             Row(children: [
