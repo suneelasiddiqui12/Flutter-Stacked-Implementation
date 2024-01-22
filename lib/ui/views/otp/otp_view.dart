@@ -13,7 +13,7 @@ class OtpView extends StatelessWidget {
     final defaultPinTheme = PinTheme(
       width: 47,
       height: 59,
-      textStyle: FontStylesConstant.font20(color: AppColors.royalBlue),
+      textStyle: FontStylesConstant.font20(color: AppColors.black),
       decoration: BoxDecoration(
         border: Border.all(color: AppColors.black),
         borderRadius: BorderRadius.circular(8),
@@ -21,13 +21,13 @@ class OtpView extends StatelessWidget {
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: Border.all(color: AppColors.royalBlue),
+      border: Border.all(color: AppColors.black),
       borderRadius: BorderRadius.circular(8),
     );
 
     final submittedPinTheme = defaultPinTheme.copyWith(
       decoration: defaultPinTheme.decoration?.copyWith(
-        color: const Color.fromRGBO(234, 239, 243, 1),
+        color: AppColors.white,
       ),
     );
 
@@ -37,12 +37,12 @@ class OtpView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Spacer(flex: 4),
+            const Spacer(flex: 10),
             const Text(
               AppStrings.entrOtp,
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
             ),
-            const SizedBox(height: 20),
+            const Spacer(flex: 1),
             Pinput(
               defaultPinTheme: defaultPinTheme,
               focusedPinTheme: focusedPinTheme,
@@ -50,11 +50,11 @@ class OtpView extends StatelessWidget {
               validator: (value) {
                 return value == '2222' ? null : 'Pin is incorrect';
               },
-              pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
+              pinputAutovalidateMode: PinputAutovalidateMode.disabled,
               showCursor: true,
               onCompleted: (pin) => print(pin),
             ),
-            const SizedBox(height: 10.0),
+            const Spacer(),
             const Text(
               AppStrings.resendOtp,
               style: TextStyle(
@@ -62,17 +62,17 @@ class OtpView extends StatelessWidget {
                   fontWeight: FontWeight.normal,
                   color: AppColors.royalBlue),
             ),
-            const SizedBox(height: 10.0),
+            const Spacer(),
             const Text(
               AppStrings.otpInstruction,
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
             ),
-            const Spacer(flex: 2),
+            const Spacer(flex: 7),
             Row(children: [
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 26.0),
                   child: ButtonComponent(
                     buttonText: AppStrings.next,
                     onPressed: () {},
@@ -80,7 +80,7 @@ class OtpView extends StatelessWidget {
                 ),
               ),
             ]),
-            const Spacer(flex: 1),
+            const Spacer(flex: 3),
           ],
         ),
       ),
