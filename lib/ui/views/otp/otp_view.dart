@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stacked_implementation/constant/app_colors.dart';
+import 'package:flutter_stacked_implementation/constant/font_styles_constant.dart';
+import 'package:flutter_stacked_implementation/widgets/button_component.dart';
 import 'package:pinput/pinput.dart';
 import 'package:flutter_stacked_implementation/constant/app_strings.dart';
 
@@ -10,18 +13,15 @@ class OtpView extends StatelessWidget {
     final defaultPinTheme = PinTheme(
       width: 47,
       height: 59,
-      textStyle: const TextStyle(
-          fontSize: 20,
-          color: Color.fromRGBO(30, 60, 87, 1),
-          fontWeight: FontWeight.w600),
+      textStyle: FontStylesConstant.font20(color: AppColors.royalBlue),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.black),
+        border: Border.all(color: AppColors.black),
         borderRadius: BorderRadius.circular(8),
       ),
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: Border.all(color: Color.fromRGBO(114, 178, 238, 1)),
+      border: Border.all(color: AppColors.royalBlue),
       borderRadius: BorderRadius.circular(8),
     );
 
@@ -37,6 +37,7 @@ class OtpView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const Spacer(flex: 4),
             const Text(
               AppStrings.entrOtp,
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
@@ -59,7 +60,7 @@ class OtpView extends StatelessWidget {
               style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.normal,
-                  color: Colors.blueAccent),
+                  color: AppColors.royalBlue),
             ),
             const SizedBox(height: 10.0),
             const Text(
@@ -67,6 +68,19 @@ class OtpView extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
             ),
+            const Spacer(flex: 2),
+            Row(children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                  child: ButtonComponent(
+                    buttonText: AppStrings.next,
+                    onPressed: () {},
+                  ),
+                ),
+              ),
+            ]),
+            const Spacer(flex: 1),
           ],
         ),
       ),

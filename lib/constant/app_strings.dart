@@ -11,4 +11,5 @@ class AppStrings {
   static const String resendOtp = 'Resend OTP';
   static const String otpInstruction =
       'Please enter the OTP sent\non your new mobile number';
+  static const String next = 'Next';
 }
