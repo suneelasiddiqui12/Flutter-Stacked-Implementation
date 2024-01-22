@@ -24,7 +24,9 @@ class FormBasicView extends StatelessWidget {
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const TextComponent('NAME'),
+                          const TextComponent(
+                              'NAME',
+                          ),
                           TextFormFieldComponent(
                             hintText: 'abcdefgh@11!',
                             controller: model.nameController,

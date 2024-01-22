@@ -28,6 +28,7 @@ class TextFormFieldComponent extends StatelessWidget {
         decoration: InputDecoration(
           hintText: hintText,
           labelText: labelText,
+          hintStyle: const TextStyle(color: AppColors.quickGray),
           filled: true,
           fillColor: backgroundColor ?? AppColors.white,
           border: OutlineInputBorder(

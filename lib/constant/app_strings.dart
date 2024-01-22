@@ -13,6 +13,8 @@ class AppStrings {
   static const String enterPhoneNumber = 'PHONE';
   static const String enterValidPhoneNumber = 'Please enter a valid phone number';
 
+  static const String errorThisFieldCantBeEmpty = 'This field cannot be empty';
+  static const String errorInvalidEmail = 'Invalid Email';
 
 
 }
