@@ -4,6 +4,7 @@ import 'package:flutter_stacked_implementation/ui/views/home/home_view.dart';
 import 'package:flutter_stacked_implementation/ui/views/image_picker/image_picker_view.dart';
 import 'package:flutter_stacked_implementation/ui/views/onboarding/onboarding_view.dart';
 import 'package:flutter_stacked_implementation/ui/views/otp/otp_view.dart';
+import 'package:flutter_stacked_implementation/ui/views/phone_listing/phone_listing_view.dart';
 import 'package:flutter_stacked_implementation/ui/views/splash/splash_view.dart';
 import 'package:flutter_stacked_implementation/ui/views/startup/startup_view.dart';
 import 'package:stacked/stacked_annotations.dart';
@@ -17,7 +18,8 @@ import 'package:stacked_services/stacked_services.dart';
     MaterialRoute(page: SplashView),
     MaterialRoute(page: OnBoardingView),
     MaterialRoute(page: FormBasicView),
-    MaterialRoute(page: OtpView, initial: true),
+    MaterialRoute(page: OtpView),
+    MaterialRoute(page: PhoneListingView, initial: true),
   ],
   dependencies: [
     LazySingleton(classType: NavigationService),

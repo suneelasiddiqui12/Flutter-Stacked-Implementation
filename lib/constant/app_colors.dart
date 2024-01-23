@@ -9,4 +9,7 @@ class AppColors {
   static const brightGray = Color(0xffEFEFEF);
   static const quickGray = Color(0xffA6A6A6);
   static const white = Color(0xffEFEFEF);
+  static const ghostWhite = Color(0xffF8F9F9);
+  static const tuftsBlue = Color(0xff3B84D3);
+  static const nonPhotoBlue = Color(0xff9DD8EF);
 }

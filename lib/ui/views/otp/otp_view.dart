@@ -15,8 +15,8 @@ class OtpView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(
-      width: 47,
-      height: 59,
+      width: 47.flexibleWidth,
+      height: 59.flexibleHeight,
       textStyle: FontStylesConstant.font20(color: AppColors.black),
       decoration: BoxDecoration(
         border: Border.all(color: AppColors.black),

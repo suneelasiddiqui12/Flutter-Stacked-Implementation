@@ -17,5 +17,10 @@ class AppStrings {
   static const String errorThisFieldCantBeEmpty = 'This field cannot be empty';
   static const String errorInvalidEmail = 'Invalid Email';
 
-
+  //phone listing
+  static const String preferredMobBrand = 'Select Your Preferred Mobile Brand';
+  static const String selectPhone = 'Select Phone';
+  static const String deviceName = 'Samsung Note 3';
+  static const String variantName = '16GB RAM  64GB Storage';
+  static const String asLow = 'As low as\n 1200/mon';
 }
