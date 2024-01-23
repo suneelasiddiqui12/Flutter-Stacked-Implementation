@@ -3,12 +3,12 @@
 final emailRegex = RegExp(r'^[a-zA-Z0-9+._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
   final passwordRegex = RegExp(r'^.{8,}$');
   final usernameRegex = RegExp(r'^.{3,}$');
-  final numberRegex = RegExp(r'^.{11,15}$');
+  final digitRegex = RegExp(r'^\d+$');
   final cnicRegex = RegExp(r'^\d{5}-\d{7}-\d{1}$');
 
   String? validateEmptyField(String? value, String fieldName) {
     if (value == null || value.isEmpty) {
-      return '$fieldName ${AppStrings.errorThisFieldCantBeEmpty}';
+      return AppStrings.errorThisFieldCantBeEmpty;
     }
     return null;
   }
@@ -18,11 +18,9 @@ final emailRegex = RegExp(r'^[a-zA-Z0-9+._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
     if (emptyFieldError != null) {
       return emptyFieldError;
     }
-
     if (!usernameRegex.hasMatch(value!)) {
       return 'Min three characters limit is required';
     }
-
     return null;
   }
 
@@ -31,11 +29,9 @@ final emailRegex = RegExp(r'^[a-zA-Z0-9+._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
     if (emptyFieldError != null) {
       return emptyFieldError;
     }
-
     if (!cnicRegex.hasMatch(cnic!)) {
       return 'Invalid CNIC format';
     }
-
     return null;
   }
 
@@ -44,11 +40,9 @@ final emailRegex = RegExp(r'^[a-zA-Z0-9+._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
     if (emptyFieldError != null) {
       return emptyFieldError;
     }
-
     if (!emailRegex.hasMatch(value!)) {
       return 'Invalid email format';
     }
-
     return null;
   }
 
@@ -57,11 +51,14 @@ final emailRegex = RegExp(r'^[a-zA-Z0-9+._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
     if (emptyFieldError != null) {
       return emptyFieldError;
     }
-
-    if (!numberRegex.hasMatch(value!)) {
-      return 'Number must be 8-15 characters';
+    // Check if the value is a valid integer
+    if (!digitRegex.hasMatch(value!)) {
+      return 'Invalid number format';
     }
-
+    // Check if the integer has exactly 11 digits
+    if (value.length != 11) {
+      return 'Number must be exactly 11 digits';
+    }
     return null;
   }
 
@@ -70,11 +67,9 @@ final emailRegex = RegExp(r'^[a-zA-Z0-9+._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
     if (emptyFieldError != null) {
       return emptyFieldError;
     }
-
     if (!passwordRegex.hasMatch(value!)) {
       return 'Password must be at least 8 characters long';
     }
-
     return null;
   }
 
@@ -82,9 +77,37 @@ final emailRegex = RegExp(r'^[a-zA-Z0-9+._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
     if (value == null || value.isEmpty) {
       return null;
     }
-
     if (!passwordRegex.hasMatch(value)) {
       return 'Password must be at least 8 characters long';
+    }
+    return null;
+  }
+
+  String? validateIncome(String? value) {
+    String? emptyFieldError = validateEmptyField(value, 'Income');
+    if (emptyFieldError != null) {
+      return emptyFieldError;
+    }
+    try {
+      int income = int.parse(value!);
+
+      if (income <= 10000) {
+        return 'Income must be greater than PKR 10000';
+      }
+    } catch (e) {
+      return 'Invalid income format';
+    }
+    return null;
+  }
+
+  String? validateAddress(String? value) {
+    String? emptyFieldError = validateEmptyField(value, 'Address');
+    if (emptyFieldError != null) {
+      return emptyFieldError;
+    }
+
+    if (value!.length > 100) {
+      return 'Address should not be more than 100 characters';
     }
 
     return null;

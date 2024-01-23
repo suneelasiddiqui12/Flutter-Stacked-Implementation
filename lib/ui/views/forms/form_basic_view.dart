@@ -39,12 +39,14 @@ class FormBasicView extends StatelessWidget {
                           TextFormFieldComponent(
                             hintText: '42201-XXXXXXXXX-X',
                             controller: model.cnicController,
+                            keyboardType: TextInputType.phone,
                             validator: (value) => validateCnic(value),
                           ),
                           const TextComponent('PHONE'),
                           TextFormFieldComponent(
                             hintText: '+92 332XXXXXX',
                             controller: model.phoneNumberController,
+                            keyboardType: TextInputType.phone,
                             validator: (value) => validateNumber(value),
                           ),
                         ]

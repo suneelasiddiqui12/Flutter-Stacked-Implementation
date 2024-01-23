@@ -39,7 +39,9 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             padding: const EdgeInsets.all(16.0),
             child: ButtonComponent(
               buttonText: AppStrings.signUp,
-              onPressed: () {},
+              onPressed: () {
+                NavService.navigateTo(Routes.formAdvanceView);
+              },
               bgColor: Colors.white,
               buttonTxtColor: Colors.black,
               borderColor: Colors.black,

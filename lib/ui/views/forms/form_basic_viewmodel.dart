@@ -11,4 +11,6 @@ class FormBasicViewModel extends BaseViewModel {
   FocusNode phoneNumberFocusNode = FocusNode();
 
   final formKey = GlobalKey<FormState>();
+
 }
+
