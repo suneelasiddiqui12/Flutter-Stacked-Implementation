@@ -8,6 +8,10 @@ class TextFormFieldComponent extends StatelessWidget {
   final String? hintText;
   final String? labelText;
   final EdgeInsets? contentPadding;
+  final String? Function(String?)? validator;
+  final Function(String _)? onChanged;
+  final bool isPassword;
+  final TextInputType keyboardType;
 
   const TextFormFieldComponent({super.key,
     required this.controller,
@@ -16,15 +20,25 @@ class TextFormFieldComponent extends StatelessWidget {
     this.hintText,
     this.labelText,
     this.contentPadding,
+    this.validator,
+    this.onChanged,
+    this.isPassword = false,
+    this.keyboardType = TextInputType.text,
   });
 
   @override
   Widget build(BuildContext context) {
+    bool hidePassword = true;
     return SizedBox(
       width: 360.0,
       height: 60.8,
       child: TextFormField(
         controller: controller,
+        validator: validator,
+        onChanged: (_) => onChanged == null ? () {} : onChanged!(_),
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        obscureText: isPassword ? hidePassword : !hidePassword,
+        keyboardType: keyboardType,
         decoration: InputDecoration(
           hintText: hintText,
           labelText: labelText,
@@ -47,12 +61,6 @@ class TextFormFieldComponent extends StatelessWidget {
           ),
           contentPadding: contentPadding ?? const EdgeInsets.all(14.4),
         ),
-        validator: (value) {
-          if (value == null || value.isEmpty) {
-            return 'Please enter a value';
-          }
-          return null;
-        },
       ),
     );
   }

@@ -16,6 +16,15 @@ class AppStrings {
   //validation
   static const String errorThisFieldCantBeEmpty = 'This field cannot be empty';
   static const String errorInvalidEmail = 'Invalid Email';
+  static const String errorPleaseEnterYour = 'Please enter your';
+  static const String errorPleaseEnterValueLessThanFortyChar = 'Please Enter value less than 40 characters';
+  static const String errorPhoneNumMustContainElevenNumbers = 'Phone number must contain 11 digits';
+
+  //FormBasic
+  static const String fieldName = 'Name';
+  static const String fieldCnicNumber = 'Cnic Number';
+  static const String fieldNumber = 'Phone Number';
+
 
 
 }

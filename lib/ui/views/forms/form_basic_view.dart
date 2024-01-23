@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stacked_implementation/app/app.router.dart';
+import 'package:flutter_stacked_implementation/services/local/navigation_services.dart';
 import 'package:flutter_stacked_implementation/ui/views/forms/form_basic_viewmodel.dart';
+import 'package:flutter_stacked_implementation/utils/validation_util.dart';
 import 'package:flutter_stacked_implementation/widgets/button_component.dart';
 import 'package:flutter_stacked_implementation/widgets/text_component.dart';
 import 'package:flutter_stacked_implementation/widgets/text_form_field_component.dart';
@@ -30,16 +33,19 @@ class FormBasicView extends StatelessWidget {
                           TextFormFieldComponent(
                             hintText: 'abcdefgh@11!',
                             controller: model.nameController,
+                              validator: (value) => validateName(value),
                           ),
                           const TextComponent('CNIC'),
                           TextFormFieldComponent(
                             hintText: '42201-XXXXXXXXX-X',
                             controller: model.cnicController,
+                            validator: (value) => validateCnic(value),
                           ),
                           const TextComponent('PHONE'),
                           TextFormFieldComponent(
                             hintText: '+92 332XXXXXX',
                             controller: model.phoneNumberController,
+                            validator: (value) => validateNumber(value),
                           ),
                         ]
                     ),
@@ -48,7 +54,11 @@ class FormBasicView extends StatelessWidget {
                     width: double.infinity,
                     child: ButtonComponent(
                         buttonText: 'Next',
-                        onPressed: () {}),
+                        onPressed: () {
+                          model.formKey.currentState!.validate()
+                              ? NavService.navigateTo(Routes.onBoardingView)
+                              : Text('ABCDEF');
+                        }),
                   )
                 ],
               ),
