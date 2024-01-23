@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:stacked/stacked.dart';
 
 class FormBasicViewModel extends BaseViewModel {
-
   TextEditingController nameController = TextEditingController();
   TextEditingController cnicController = TextEditingController();
   TextEditingController phoneNumberController = TextEditingController();
@@ -12,4 +11,6 @@ class FormBasicViewModel extends BaseViewModel {
   FocusNode phoneNumberFocusNode = FocusNode();
 
   final formKey = GlobalKey<FormState>();
+
 }
+
