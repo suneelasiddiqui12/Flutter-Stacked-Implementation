@@ -31,15 +31,15 @@ import 'package:stacked/stacked.dart' as _i1;
 import 'package:stacked_services/stacked_services.dart' as _i13;
 
 class Routes {
-  static const homeView = '/home-view';
+  static const homeView = '/';
 
   static const startUpView = '/start-up-view';
 
   static const imagePickerView = '/image-picker-view';
 
-  static const splashView = '/';
+  static const splashView = '/splash-view';
 
-  static const onBoardingView = '/on-boarding-view';
+  static const onBoardingScreen = '/on-boarding-screen';
 
   static const formBasicView = '/form-basic-view';
 
@@ -56,7 +56,7 @@ class Routes {
     startUpView,
     imagePickerView,
     splashView,
-    onBoardingView,
+    onBoardingScreen,
     formBasicView,
     otpView,
     phoneListingView,
@@ -84,8 +84,8 @@ class StackedRouter extends _i1.RouterBase {
       page: _i5.SplashView,
     ),
     _i1.RouteDef(
-      Routes.onBoardingView,
-      page: _i6.OnBoardingView,
+      Routes.onBoardingScreen,
+      page: _i6.OnBoardingScreen,
     ),
     _i1.RouteDef(
       Routes.formBasicView,
@@ -134,9 +134,9 @@ class StackedRouter extends _i1.RouterBase {
         settings: data,
       );
     },
-    _i6.OnBoardingView: (data) {
+    _i6.OnBoardingScreen: (data) {
       return _i12.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i6.OnBoardingView(),
+        builder: (context) => const _i6.OnBoardingScreen(),
         settings: data,
       );
     },
@@ -236,14 +236,14 @@ extension NavigatorStateExtension on _i13.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> navigateToOnBoardingView([
+  Future<dynamic> navigateToOnBoardingScreen([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return navigateTo<dynamic>(Routes.onBoardingView,
+    return navigateTo<dynamic>(Routes.onBoardingScreen,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -376,14 +376,14 @@ extension NavigatorStateExtension on _i13.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> replaceWithOnBoardingView([
+  Future<dynamic> replaceWithOnBoardingScreen([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return replaceWith<dynamic>(Routes.onBoardingView,
+    return replaceWith<dynamic>(Routes.onBoardingScreen,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

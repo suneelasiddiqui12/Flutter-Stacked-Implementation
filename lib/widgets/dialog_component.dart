@@ -90,25 +90,25 @@ class DialogComponent extends StatelessWidget {
           const SizedBox(height: 20.0),
           addButton
               ? Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ButtonComponent(
-                    buttonText: addButtonText1 ?? "Next",
-                    onPressed: onPressed,
-                    bgColor: AppColors.white,
-                    buttonTxtColor: AppColors.frenchSkyBlue,
-                    borderColor: AppColors.transparent,
-                  ),
-                  ButtonComponent(
-                    buttonText: addButtonText2 ?? "Next",
-                    onPressed: onPressed,
-                  ),
-                ],
-              )
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ButtonComponent(
+                      buttonText: addButtonText1 ?? "Next",
+                      onPressed: onPressed,
+                      bgColor: AppColors.white,
+                      buttonTxtColor: AppColors.frenchSkyBlue,
+                      borderColor: AppColors.transparent,
+                    ),
+                    ButtonComponent(
+                      buttonText: addButtonText2 ?? "Next",
+                      onPressed: onPressed,
+                    ),
+                  ],
+                )
               : ButtonComponent(
                   buttonText: buttonText ?? "Next",
                   onPressed: onPressed,
-              ),
+                ),
           const SizedBox(height: 20.0),
         ],
       ),

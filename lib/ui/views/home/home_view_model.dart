@@ -8,12 +8,14 @@ class HomeViewModel extends BaseViewModel {
   ApiService apiService = locator<ApiService>();
 
   final String _title = "Home View";
+
+  List<String> list = ["Bilalum","Sultanum","Suneelum","Bilalum","Sultanum","Suneelum"];
+
   String get title => _title;
 
-  Future getMockData() async{
-
-   final response =  apiService.getMockData();
-
+  Future getMockData() async {
+    final response = apiService.getMockData();
   }
+
 
 }

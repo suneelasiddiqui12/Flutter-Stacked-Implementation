@@ -6,13 +6,15 @@ import 'package:flutter_stacked_implementation/constant/font_styles_constant.dar
 import 'package:flutter_stacked_implementation/widgets/text_component.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class AppBarComponent extends StatelessWidget {
+class AppBarComponent extends StatelessWidget implements PreferredSizeWidget{
   final VoidCallback? onLeadingPressed;
   final String? leadingIconPath;
   final String screenName;
   final bool withBackgroundColor;
   final String? title;
   final TextStyle? titleStyle;
+
+
   const AppBarComponent({
     Key? key,
     this.onLeadingPressed,
@@ -53,4 +55,7 @@ class AppBarComponent extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  Size get preferredSize => throw UnimplementedError();
 }

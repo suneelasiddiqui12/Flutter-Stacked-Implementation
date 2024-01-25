@@ -54,6 +54,9 @@ dependencies:
   google_fonts:
   flutter_screenutil:
 
+  # bottom navigation
+  motion_tab_bar:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

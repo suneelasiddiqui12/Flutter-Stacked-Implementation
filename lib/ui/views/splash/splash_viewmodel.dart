@@ -3,12 +3,11 @@ import 'package:flutter_stacked_implementation/services/local/navigation_service
 import 'package:stacked/stacked.dart';
 
 class SplashViewModel extends BaseViewModel {
-  //UserViewModel userViewModel = UserViewModel();
+
 
   Future<void> onInit() async {
-    await Future.delayed(const Duration(milliseconds: 2000));
-    NavService.navigateTo(Routes.onBoardingView);
-    //onUserAuth();
+    await Future.delayed(const Duration(milliseconds: 1000));
+    NavService.navigateTo(Routes.onBoardingScreen);
   }
 
   // void onUserAuth() async {
@@ -29,4 +28,6 @@ class SplashViewModel extends BaseViewModel {
   //             if (error != null) {NavService.showSnackbar("Error", "$error")}
   //           });
   // }
+
+
 }

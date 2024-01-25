@@ -14,4 +14,10 @@ class AppColors {
   static const nonPhotoBlue = Color(0xff9DD8EF);
   static const americanSilver = Color(0xffCECECE);
   static const blue = Color(0xff257AFD);
+  static const lightOrange = Color(0xffE3C5AA);
+  static const darkOrange = Color(0xffDF663F);
+  static const lightGreen = Color(0xff9ACA9C);
+  static const darkGreen = Color(0xff356736);
+  static const lightBlue = Color(0xffABBCEA);
+  static const darkBlue = Color(0xff002FAD);
 }

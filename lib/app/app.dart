@@ -14,11 +14,11 @@ import 'package:stacked_services/stacked_services.dart';
 
 @StackedApp(
   routes: [
-    MaterialRoute(page: HomeView),
+    MaterialRoute(page: HomeView, initial: true),
     MaterialRoute(page: StartUpView),
     MaterialRoute(page: ImagePickerView),
     MaterialRoute(page: SplashView, initial: true),
-    MaterialRoute(page: OnBoardingView),
+    MaterialRoute(page: OnBoardingScreen),
     MaterialRoute(page: FormBasicView),
     MaterialRoute(page: OtpView),
     MaterialRoute(page: PhoneListingView),

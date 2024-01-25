@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../constant/font_styles_constant.dart';
+
 class TextComponent extends StatelessWidget {
   final String text;
   final TextAlign textAlign;

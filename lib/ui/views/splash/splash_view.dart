@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stacked_implementation/constant/app_images.dart';
 import 'package:flutter_stacked_implementation/ui/views/splash/splash_viewmodel.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:stacked/stacked.dart';
 
 class SplashView extends StatelessWidget {
+
   const SplashView({super.key});
 
   @override
@@ -16,7 +18,7 @@ class SplashView extends StatelessWidget {
             body: Container(
               width: double.infinity,
               height: double.infinity,
-              color: Colors.white,
+              color: Colors.blue,
               // decoration: const BoxDecoration(
               //   image: DecorationImage(
               //       image: AssetImage(AppImagePaths.splashImg),
@@ -25,7 +27,7 @@ class SplashView extends StatelessWidget {
               child: Stack(
                 children: [
                   Center(
-                    child: Image.asset(AppImagePaths.splashImg),
+                    child: SvgPicture.asset(AppImagePaths.splashImg),
                   ),
                 ],
               ),
