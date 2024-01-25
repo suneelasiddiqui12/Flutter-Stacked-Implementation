@@ -138,12 +138,29 @@ class FontStylesConstant {
     FontWeight fontWeight = FontWeight.normal,
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration decoration = TextDecoration.none,
+    double fontSize = 20.0
+
   }) =>
       GoogleFonts.poppins(
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
-        fontSize: 20.0,
+        fontSize: fontSize.fontSize,
+        decoration: decoration,
+      );
+
+
+  static TextStyle font20Bold({
+    Color color = AppColors.black,
+    FontWeight fontWeight = FontWeight.bold,
+    FontStyle fontStyle = FontStyle.normal,
+    TextDecoration decoration = TextDecoration.none,
+  }) =>
+      GoogleFonts.poppins(
+        color: color,
+        fontWeight: fontWeight,
+        fontStyle: fontStyle,
+        fontSize: 20.fontSize,
         decoration: decoration,
       );
 

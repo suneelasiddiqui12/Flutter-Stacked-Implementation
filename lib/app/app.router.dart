@@ -5,8 +5,10 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter/material.dart' as _i8;
+import 'package:flutter/material.dart' as _i9;
 import 'package:flutter/material.dart';
+import 'package:flutter_stacked_implementation/ui/views/forms/form_basic_view.dart'
+    as _i7;
 import 'package:flutter_stacked_implementation/ui/views/home/home_view.dart'
     as _i2;
 import 'package:flutter_stacked_implementation/ui/views/image_picker/image_picker_view.dart'
@@ -14,16 +16,16 @@ import 'package:flutter_stacked_implementation/ui/views/image_picker/image_picke
 import 'package:flutter_stacked_implementation/ui/views/onboarding/onboarding_view.dart'
     as _i6;
 import 'package:flutter_stacked_implementation/ui/views/otp/otp_view.dart'
-    as _i7;
+    as _i8;
 import 'package:flutter_stacked_implementation/ui/views/splash/splash_view.dart'
     as _i5;
 import 'package:flutter_stacked_implementation/ui/views/startup/startup_view.dart'
     as _i3;
 import 'package:stacked/stacked.dart' as _i1;
-import 'package:stacked_services/stacked_services.dart' as _i9;
+import 'package:stacked_services/stacked_services.dart' as _i10;
 
 class Routes {
-  static const homeView = '/home-view';
+  static const homeView = '/';
 
   static const startUpView = '/start-up-view';
 
@@ -31,7 +33,9 @@ class Routes {
 
   static const splashView = '/splash-view';
 
-  static const onBoardingScreen = '/';
+  static const onBoardingScreen = '/on-boarding-screen';
+
+  static const formBasicView = '/form-basic-view';
 
   static const otpView = '/otp-view';
 
@@ -41,6 +45,7 @@ class Routes {
     imagePickerView,
     splashView,
     onBoardingScreen,
+    formBasicView,
     otpView,
   };
 }
@@ -68,45 +73,55 @@ class StackedRouter extends _i1.RouterBase {
       page: _i6.OnBoardingScreen,
     ),
     _i1.RouteDef(
+      Routes.formBasicView,
+      page: _i7.FormBasicView,
+    ),
+    _i1.RouteDef(
       Routes.otpView,
-      page: _i7.OtpView,
+      page: _i8.OtpView,
     ),
   ];
 
   final _pagesMap = <Type, _i1.StackedRouteFactory>{
     _i2.HomeView: (data) {
-      return _i8.MaterialPageRoute<dynamic>(
+      return _i9.MaterialPageRoute<dynamic>(
         builder: (context) => const _i2.HomeView(),
         settings: data,
       );
     },
     _i3.StartUpView: (data) {
-      return _i8.MaterialPageRoute<dynamic>(
+      return _i9.MaterialPageRoute<dynamic>(
         builder: (context) => const _i3.StartUpView(),
         settings: data,
       );
     },
     _i4.ImagePickerView: (data) {
-      return _i8.MaterialPageRoute<dynamic>(
+      return _i9.MaterialPageRoute<dynamic>(
         builder: (context) => const _i4.ImagePickerView(),
         settings: data,
       );
     },
     _i5.SplashView: (data) {
-      return _i8.MaterialPageRoute<dynamic>(
+      return _i9.MaterialPageRoute<dynamic>(
         builder: (context) => const _i5.SplashView(),
         settings: data,
       );
     },
     _i6.OnBoardingScreen: (data) {
-      return _i8.MaterialPageRoute<dynamic>(
+      return _i9.MaterialPageRoute<dynamic>(
         builder: (context) => const _i6.OnBoardingScreen(),
         settings: data,
       );
     },
-    _i7.OtpView: (data) {
-      return _i8.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i7.OtpView(),
+    _i7.FormBasicView: (data) {
+      return _i9.MaterialPageRoute<dynamic>(
+        builder: (context) => const _i7.FormBasicView(),
+        settings: data,
+      );
+    },
+    _i8.OtpView: (data) {
+      return _i9.MaterialPageRoute<dynamic>(
+        builder: (context) => const _i8.OtpView(),
         settings: data,
       );
     },
@@ -119,7 +134,7 @@ class StackedRouter extends _i1.RouterBase {
   Map<Type, _i1.StackedRouteFactory> get pagesMap => _pagesMap;
 }
 
-extension NavigatorStateExtension on _i9.NavigationService {
+extension NavigatorStateExtension on _i10.NavigationService {
   Future<dynamic> navigateToHomeView([
     int? routerId,
     bool preventDuplicates = true,
@@ -184,6 +199,20 @@ extension NavigatorStateExtension on _i9.NavigationService {
         transition,
   ]) async {
     return navigateTo<dynamic>(Routes.onBoardingScreen,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
+  Future<dynamic> navigateToFormBasicView([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return navigateTo<dynamic>(Routes.formBasicView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -268,6 +297,20 @@ extension NavigatorStateExtension on _i9.NavigationService {
         transition,
   ]) async {
     return replaceWith<dynamic>(Routes.onBoardingScreen,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
+  Future<dynamic> replaceWithFormBasicView([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return replaceWith<dynamic>(Routes.formBasicView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
