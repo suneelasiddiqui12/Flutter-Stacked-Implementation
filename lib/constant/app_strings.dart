@@ -23,4 +23,10 @@ class AppStrings {
   static const String deviceName = 'Samsung Note 3';
   static const String variantName = '16GB RAM  64GB Storage';
   static const String asLow = 'As low as\n 1200/mon';
+  static const String asLow2 = 'As low as 1200/mon';
+
+  //variant view
+  static const String chooseRam = 'Choose RAM:';
+  static const String chooseStorage = 'Choose Storage:';
+  static const String chooseColor = 'Choose Color: Black';
 }
