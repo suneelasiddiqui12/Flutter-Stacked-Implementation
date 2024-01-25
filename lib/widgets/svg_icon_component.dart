@@ -10,8 +10,8 @@ class SvgIconComponent extends StatelessWidget {
   const SvgIconComponent({
     Key? key,
     required this.icon,
-    this.height = 24,
-    this.width = 24,
+    this.height = 21,
+    this.width = 21,
     this.color,
   }) : super(key: key);
 

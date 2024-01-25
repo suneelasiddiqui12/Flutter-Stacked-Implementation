@@ -75,7 +75,7 @@ class OtpView extends StatelessWidget {
                   child: ButtonComponent(
                     buttonText: AppStrings.next,
                     onPressed: () {
-                      NavService.navigateTo(Routes.formBasicView);
+                      NavService.navigateTo(Routes.onBoardingView);
                     },
                   ),
                 ),

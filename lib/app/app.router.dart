@@ -5,8 +5,10 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter/material.dart' as _i11;
+import 'package:flutter/material.dart' as _i12;
 import 'package:flutter/material.dart';
+import 'package:flutter_stacked_implementation/ui/views/form_advance/form_advance_view.dart'
+    as _i11;
 import 'package:flutter_stacked_implementation/ui/views/forms/form_basic_view.dart'
     as _i7;
 import 'package:flutter_stacked_implementation/ui/views/home/home_view.dart'
@@ -26,7 +28,7 @@ import 'package:flutter_stacked_implementation/ui/views/startup/startup_view.dar
 import 'package:flutter_stacked_implementation/ui/views/variant/variant_view.dart'
     as _i10;
 import 'package:stacked/stacked.dart' as _i1;
-import 'package:stacked_services/stacked_services.dart' as _i12;
+import 'package:stacked_services/stacked_services.dart' as _i13;
 
 class Routes {
   static const homeView = '/home-view';
@@ -47,6 +49,8 @@ class Routes {
 
   static const variantView = '/variant-view';
 
+  static const formAdvanceView = '/form-advance-view';
+
   static const all = <String>{
     homeView,
     startUpView,
@@ -57,6 +61,7 @@ class Routes {
     otpView,
     phoneListingView,
     variantView,
+    formAdvanceView,
   };
 }
 
@@ -98,60 +103,70 @@ class StackedRouter extends _i1.RouterBase {
       Routes.variantView,
       page: _i10.VariantView,
     ),
+    _i1.RouteDef(
+      Routes.formAdvanceView,
+      page: _i11.FormAdvanceView,
+    ),
   ];
 
   final _pagesMap = <Type, _i1.StackedRouteFactory>{
     _i2.HomeView: (data) {
-      return _i11.MaterialPageRoute<dynamic>(
+      return _i12.MaterialPageRoute<dynamic>(
         builder: (context) => const _i2.HomeView(),
         settings: data,
       );
     },
     _i3.StartUpView: (data) {
-      return _i11.MaterialPageRoute<dynamic>(
+      return _i12.MaterialPageRoute<dynamic>(
         builder: (context) => const _i3.StartUpView(),
         settings: data,
       );
     },
     _i4.ImagePickerView: (data) {
-      return _i11.MaterialPageRoute<dynamic>(
+      return _i12.MaterialPageRoute<dynamic>(
         builder: (context) => const _i4.ImagePickerView(),
         settings: data,
       );
     },
     _i5.SplashView: (data) {
-      return _i11.MaterialPageRoute<dynamic>(
+      return _i12.MaterialPageRoute<dynamic>(
         builder: (context) => const _i5.SplashView(),
         settings: data,
       );
     },
     _i6.OnBoardingView: (data) {
-      return _i11.MaterialPageRoute<dynamic>(
+      return _i12.MaterialPageRoute<dynamic>(
         builder: (context) => const _i6.OnBoardingView(),
         settings: data,
       );
     },
     _i7.FormBasicView: (data) {
-      return _i11.MaterialPageRoute<dynamic>(
+      return _i12.MaterialPageRoute<dynamic>(
         builder: (context) => const _i7.FormBasicView(),
         settings: data,
       );
     },
     _i8.OtpView: (data) {
-      return _i11.MaterialPageRoute<dynamic>(
+      return _i12.MaterialPageRoute<dynamic>(
         builder: (context) => const _i8.OtpView(),
         settings: data,
       );
     },
     _i9.PhoneListingView: (data) {
-      return _i11.MaterialPageRoute<dynamic>(
+      return _i12.MaterialPageRoute<dynamic>(
         builder: (context) => const _i9.PhoneListingView(),
         settings: data,
       );
     },
     _i10.VariantView: (data) {
-      return _i11.MaterialPageRoute<dynamic>(
+      return _i12.MaterialPageRoute<dynamic>(
         builder: (context) => const _i10.VariantView(),
+        settings: data,
+      );
+    },
+    _i11.FormAdvanceView: (data) {
+      return _i12.MaterialPageRoute<dynamic>(
+        builder: (context) => const _i11.FormAdvanceView(),
         settings: data,
       );
     },
@@ -164,7 +179,7 @@ class StackedRouter extends _i1.RouterBase {
   Map<Type, _i1.StackedRouteFactory> get pagesMap => _pagesMap;
 }
 
-extension NavigatorStateExtension on _i12.NavigationService {
+extension NavigatorStateExtension on _i13.NavigationService {
   Future<dynamic> navigateToHomeView([
     int? routerId,
     bool preventDuplicates = true,
@@ -291,6 +306,20 @@ extension NavigatorStateExtension on _i12.NavigationService {
         transition: transition);
   }
 
+  Future<dynamic> navigateToFormAdvanceView([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return navigateTo<dynamic>(Routes.formAdvanceView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
   Future<dynamic> replaceWithHomeView([
     int? routerId,
     bool preventDuplicates = true,
@@ -411,6 +440,20 @@ extension NavigatorStateExtension on _i12.NavigationService {
         transition,
   ]) async {
     return replaceWith<dynamic>(Routes.variantView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
+  Future<dynamic> replaceWithFormAdvanceView([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return replaceWith<dynamic>(Routes.formAdvanceView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

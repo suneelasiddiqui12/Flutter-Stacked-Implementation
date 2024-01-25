@@ -1,4 +1,5 @@
 import 'package:flutter_stacked_implementation/services/local/media_service.dart';
+import 'package:flutter_stacked_implementation/ui/views/form_advance/form_advance_view.dart';
 import 'package:flutter_stacked_implementation/ui/views/forms/form_basic_view.dart';
 import 'package:flutter_stacked_implementation/ui/views/home/home_view.dart';
 import 'package:flutter_stacked_implementation/ui/views/image_picker/image_picker_view.dart';
@@ -22,6 +23,7 @@ import 'package:stacked_services/stacked_services.dart';
     MaterialRoute(page: OtpView),
     MaterialRoute(page: PhoneListingView),
     MaterialRoute(page: VariantView),
+    MaterialRoute(page: FormAdvanceView),
   ],
   dependencies: [
     LazySingleton(classType: NavigationService),
