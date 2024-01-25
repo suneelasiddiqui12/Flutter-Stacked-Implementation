@@ -33,7 +33,7 @@ class FormAdvanceView extends StatelessWidget {
                             TextFormFieldComponent(
                               hintText: AppStrings.hintAddress,
                               controller: model.addressController,
-                              validator: (value) => validateName(value),
+                              validator: (value) => validateAddress(value),
                             ),
                             const TextComponent(AppStrings.income),
                             TextFormFieldComponent(
@@ -46,7 +46,7 @@ class FormAdvanceView extends StatelessWidget {
                             TextFormFieldComponent(
                               hintText: AppStrings.hintAddress,
                               controller: model.referenceNameController,
-                              validator: (value) => validateAddress(value),
+                              validator: (value) => validateName(value),
                             ),
                             const TextComponent(AppStrings.refNumber),
                             TextFormFieldComponent(

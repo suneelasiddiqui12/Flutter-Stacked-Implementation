@@ -59,7 +59,7 @@ class FormBasicView extends StatelessWidget {
                         onPressed: () {
                           model.formKey.currentState!.validate()
                               ? NavService.navigateTo(Routes.onBoardingView)
-                              : Text('ABCDEF');
+                              : const Text('ABCDEF');
                         }),
                   )
                 ],

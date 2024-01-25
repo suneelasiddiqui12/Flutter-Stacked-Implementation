@@ -6,6 +6,7 @@ class SvgIconComponent extends StatelessWidget {
   final double height;
   final double width;
   final Color? color;
+  final BoxFit? fit;
 
   const SvgIconComponent({
     Key? key,
@@ -13,12 +14,13 @@ class SvgIconComponent extends StatelessWidget {
     this.height = 21,
     this.width = 21,
     this.color,
+    this.fit,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      fit: BoxFit.cover,
+      fit: fit ?? BoxFit.cover,
       icon,
       height: height,
       width: width,

@@ -100,7 +100,7 @@ class FontStylesConstant {
         color: color,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
-        fontSize: 14.fontSize,
+        fontSize: 14,
         decoration: decoration,
       );
 
