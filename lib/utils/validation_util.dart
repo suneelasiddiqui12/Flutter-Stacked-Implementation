@@ -2,7 +2,7 @@
 
 final emailRegex = RegExp(r'^[a-zA-Z0-9+._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
   final passwordRegex = RegExp(r'^.{8,}$');
-  final usernameRegex = RegExp(r'^.{3,}$');
+  final usernameRegex = RegExp(r'^.{9,}$');
   final digitRegex = RegExp(r'^\d+$');
   final cnicRegex = RegExp(r'^\d{5}-\d{7}-\d{1}$');
 
@@ -19,7 +19,7 @@ final emailRegex = RegExp(r'^[a-zA-Z0-9+._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
       return emptyFieldError;
     }
     if (!usernameRegex.hasMatch(value!)) {
-      return 'Min three characters limit is required';
+      return 'Min ten characters limit is required';
     }
     return null;
   }
